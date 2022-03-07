@@ -13,9 +13,7 @@ jobs:
     strategy:
       matrix:
         go_version: [ 1.17 ]
-        os: [ windows-latest ]
-
-#        os: [ ubuntu-latest, windows-latest, macOS-latest ]
+        os: [ ubuntu-latest, windows-latest, macOS-latest ]
 
     steps:
 
@@ -40,8 +38,6 @@ jobs:
         run: |
           mkdir cli-${{ matrix.os }}
           cp cli cli-${{ matrix.os }}
-          dir
-          dir cli-${{ matrix.os }}
           tar -czvf cli-${{ matrix.os }}.tar.gz cli-${{ matrix.os }}
 
       - name: Upload binaries to release
