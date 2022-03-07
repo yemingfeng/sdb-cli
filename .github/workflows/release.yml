@@ -37,7 +37,7 @@ jobs:
       - name: Gzip
         run: |
           mkdir cli-${{ matrix.os }}
-          cp cli cli-${{ matrix.os }}
+          cp cli cli-${{ matrix.os }}/
           tar -czvf cli-${{ matrix.os }}.tar.gz cli-${{ matrix.os }}
 
       - name: Upload binaries to release
