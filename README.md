@@ -1,9 +1,25 @@
 ### [SDB](https://github.com/yemingfeng/sdb) cli
 
+#### 启动 [sdb server](https://github.com/yemingfeng/sdb)
+
+默认监听端口为 10000
+
 #### 启动
 
+##### 二进制文件启动
+
+可以到 [Release](https://github.com/yemingfeng/sdb-cli/releases/) 页面下载对应操作系统的版本
+
+下载后直接启动即可
+
 ```shell
-go run ./cmd/cli/cli.go
+./cli -server localhost:10000
+```
+
+##### shell 启动
+
+```shell
+go run ./cmd/cli/cli.go -server localhost:10000
 ```
 
 #### 支持的命令列表
