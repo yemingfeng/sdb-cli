@@ -37,7 +37,6 @@ jobs:
       - name: Gzip
         run: |
           mkdir cli-${{ matrix.os }}
-          mkdir cli-${{ matrix.os }}/configs
           cp cli cli-${{ matrix.os }}
           tar -czvf cli-${{ matrix.os }}.tar.gz cli-${{ matrix.os }}
 
