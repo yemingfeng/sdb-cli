@@ -34,7 +34,7 @@ jobs:
 
       - name: Build
         run: |
-          go build -v ./cmd/cli/cli.go
+          go build -o cli -v ./cmd/cli/cli.go
 
       - name: Gzip
         run: |
