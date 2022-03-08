@@ -19,7 +19,7 @@
 ##### shell 启动
 
 ```shell
-go run ./cmd/cli/cli.go -server localhost:10000
+sh ./scripts/start_cli.sh
 ```
 
 #### 支持的命令列表
