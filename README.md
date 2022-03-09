@@ -8,7 +8,7 @@
 
 ##### docker 启动
 ```shell
-docker run aidenboss/sdb-cli:latest -server localhost:10000
+docker run yemingfeng/sdb-cli:latest -server localhost:10000
 ```
 
 ##### 二进制文件启动

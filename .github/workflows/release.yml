@@ -84,5 +84,5 @@ jobs:
           context: .
           push: true
           tags: |
-            aidenboss/sdb-cli:latest
-            aidenboss/sdb-cli:${{ steps.get_version.outputs.VERSION }}
+            yemingfeng/sdb-cli:latest
+            yemingfeng/sdb-cli:${{ steps.get_version.outputs.VERSION }}
