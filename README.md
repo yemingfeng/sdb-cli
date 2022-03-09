@@ -6,6 +6,11 @@
 
 #### 启动
 
+##### docker 启动
+```shell
+docker run aidenboss/sdb-cli:latest -server localhost:10000
+```
+
 ##### 二进制文件启动
 
 可以到 [Release](https://github.com/yemingfeng/sdb-cli/releases/) 页面下载对应操作系统的版本
