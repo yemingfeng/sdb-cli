@@ -11,6 +11,8 @@ var client pb.SDBClient
 
 func init() {
 	server := flag.String("server", "127.0.0.1:10000", "sdb server")
+	flag.Parse()
+
 	log.Printf("sdb server: %s", *server)
 	conn, err := grpc.Dial(*server, grpc.WithInsecure())
 	if err != nil {
