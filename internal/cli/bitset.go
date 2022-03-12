@@ -8,7 +8,6 @@ import (
 )
 
 func RegisterBitsetCmd(shell *ishell.Shell) {
-	shell.AddCmd(newBSCreateCmd())
 	shell.AddCmd(newBSDelCmd())
 	shell.AddCmd(newBSSetRangeCmd())
 	shell.AddCmd(newBSMSetCmd())
@@ -16,31 +15,6 @@ func RegisterBitsetCmd(shell *ishell.Shell) {
 	shell.AddCmd(newBSMGetCmd())
 	shell.AddCmd(newBSCountCmd())
 	shell.AddCmd(newBSCountRangeCmd())
-}
-
-func newBSCreateCmd() *ishell.Cmd {
-	return &ishell.Cmd{
-		Name: "bscreate",
-		Help: "bscreate key size",
-		Func: func(c *ishell.Context) {
-			if len(c.Args) != 2 {
-				c.Println("args incorrect")
-				return
-			}
-			key := c.Args[0]
-			size, err := util.StringToUInt32(c.Args[1])
-			if err != nil {
-				c.Println(err.Error())
-				return
-			}
-			response, err := client.BSCreate(context.Background(), &pb.BSCreateRequest{Key: []byte(key), Size: size})
-			if err != nil {
-				c.Println(err.Error())
-			} else {
-				c.Println(response.Success)
-			}
-		},
-	}
 }
 
 func newBSDelCmd() *ishell.Cmd {
@@ -190,8 +164,8 @@ func newBSMGetCmd() *ishell.Cmd {
 
 func newBSCountCmd() *ishell.Cmd {
 	return &ishell.Cmd{
-		Name: "bsmcount",
-		Help: "bsmcount key",
+		Name: "bscount",
+		Help: "bscount key",
 		Func: func(c *ishell.Context) {
 			if len(c.Args) != 1 {
 				c.Println("args incorrect")

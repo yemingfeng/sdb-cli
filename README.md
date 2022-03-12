@@ -47,7 +47,7 @@ Commands:
   bscreate            bscreate key size
   bsdel               bsdel key
   bsgetrange          bsgetrange key start end
-  bsmcount            bsmcount key
+  bscount             bscount key
   bsmget              bsmget key bits
   bsmset              bsmset key bits value
   bssetrange          bssetrange key start end value
