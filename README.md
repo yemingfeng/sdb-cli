@@ -7,9 +7,12 @@
 #### 启动
 
 ##### docker 启动
+
 ```shell
-docker run -it yemingfeng/sdb-cli:latest -server localhost:10000
+docker run -it yemingfeng/sdb-cli:latest -server ip:10000
 ```
+
+<b>注意：由于是容器内启动，所以需要将 ip 地址改成 sdb server 的 ip 地址</b>
 
 ##### 二进制文件启动
 
