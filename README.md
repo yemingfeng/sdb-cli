@@ -54,6 +54,7 @@ Commands:
   bsmget              bsmget key bits
   bsmset              bsmset key bits value
   bssetrange          bssetrange key start end value
+  cinfo               cinfo 
   clear               clear the screen
   del                 del key
   exit                exit the program
