@@ -2,26 +2,12 @@
 
 #### 启动 [sdb server](https://github.com/yemingfeng/sdb)
 
-默认监听端口为 10000
+SDB 默认监听端口为 10000
 
 #### 启动
 
-##### docker 启动
-
 ```shell
-docker run -it yemingfeng/sdb-cli:latest -server ip:10000
-```
-
-<b>注意：由于是容器内启动，所以需要将 ip 地址改成 sdb server 的 ip 地址</b>
-
-##### 二进制文件启动
-
-可以到 [Release](https://github.com/yemingfeng/sdb-cli/releases/) 页面下载对应操作系统的版本
-
-下载后直接启动即可
-
-```shell
-./cli -server localhost:10000
+sh ./scripts/start_cli.sh
 ```
 
 ##### shell 启动
