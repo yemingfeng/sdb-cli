@@ -18,5 +18,6 @@ func main() {
 	cli.RegisterMapCmd(shell)
 	cli.RegisterSortedSetCmd(shell)
 	cli.RegisterGeoHashCmd(shell)
+	cli.RegisterClusterCmd(shell)
 	shell.Run()
 }
